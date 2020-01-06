@@ -1,10 +1,11 @@
 TEMPLATE = app
 CONFIG += warn_on release qt
 macx {
-    QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.4u.sdk
+#    QMAKE_MAC_SDK=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
     CONFIG += x86 ppc
+    DEFINES += Q_WS_MAC
 }
-QT = core gui
+QT = core gui widgets
 FORMS = resolve-dialog.ui
 HEADERS = launcher.h resolve-dialog.h
 SOURCES = main.cpp launcher.cpp resolve-dialog.cpp
