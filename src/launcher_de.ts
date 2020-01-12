@@ -41,7 +41,7 @@
         <translation>Die mitgelieferte Java-Umgebung installieren</translation>
     </message>
     <message>
-        <source>download the latest version of the Sun Java runtime environment from the Internet.</source>
+        <source>download the latest version of the Java runtime environment from the Internet.</source>
         <translation>Die neueste Version der Java-Umgebung aus dem Internet herunterladen.</translation>
     </message>
     <message>

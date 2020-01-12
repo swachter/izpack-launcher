@@ -34,6 +34,11 @@
 #include "resolve-dialog.h"
 
 #include <iostream>
+
+#ifdef Q_WS_MAC
+#include "CoreFoundation/CoreFoundation.h"
+#endif
+
 using namespace std;
 
 void show_launch_error_message()
@@ -50,7 +55,23 @@ int main(int argc, char** argv)
     QTranslator translator;
     translator.load(QString("launcher_") + locale);
     app.installTranslator(&translator);
-    
+
+#ifdef Q_WS_MAC
+    // set the working directory to that directory that contains the application bundle
+    // -> relative paths (e.g. the path to "laucher.ini" can be resolved
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    char path[PATH_MAX];
+    if (!CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX))
+    {
+        // error!
+    }
+    CFRelease(resourcesURL);
+    chdir(path);
+    //std::cout << "Current Path: " << path << std::endl;
+    chdir("../../..");
+#endif
+
     Launcher launcher;
 detect:
     if (launcher.detectJRE())

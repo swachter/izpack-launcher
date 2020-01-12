@@ -42,7 +42,7 @@ Aucun environnement d&apos;exécution Java n&apos;a pu etre trouvé, mais il est
         <translation>installer automatiquement l&apos;environnement d&apos;exécution Java fourni avec ce logiciel</translation>
     </message>
     <message>
-        <source>download the latest version of the Sun Java runtime environment from the Internet.</source>
+        <source>download the latest version of the Java runtime environment from the Internet.</source>
         <translation>télécharger la dernière version de l&apos;environnement d&apos;exécution Java de Sun depuis l&apos;Internet.</translation>
     </message>
     <message>

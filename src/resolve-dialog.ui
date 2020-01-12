@@ -87,7 +87,7 @@
       <item>
        <widget class="QRadioButton" name="downloadRadioButton" >
         <property name="text" >
-         <string>download the latest version of the Sun Java runtime environment from the Internet.</string>
+         <string>download the latest version of the Java runtime environment from the Internet.</string>
         </property>
        </widget>
       </item>

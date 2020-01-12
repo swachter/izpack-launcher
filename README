@@ -1,11 +1,15 @@
-This is a native launcher for IzPack installers.
+Native laucher for Java applications
 
-The source code can be compiled to any platform supported by Qt
-from Trolltech with no changes:
-- cd src
-- qmake
-- make
+First prepare Mac:
 
-Enjoy!
+* Install Homebrew (https://brew.sh); terminal must closed and reopened after installation
+> brew install qt
+> brew link qt5 --force
 
--- Julien Ponge
+Then close and reopen the terminal; navigate to the src folder
+
+> cd src
+> qmake launcher.pro
+> lrelease launcher.pro
+> make
+> macdeployqt laucher.app
